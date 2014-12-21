@@ -1,0 +1,47 @@
+<div class="row">
+
+      <div class="col-md-12">
+        
+            <div class="panel panel-default">
+                  <div class="panel-heading"><h4 style="font-size: 18px">&nbsp;&nbsp; History<span class="glyphicon glyphicon-list pull-left" style="font-size: 18px"></span></</h4></div>
+                  <div class="panel-body">
+                    
+                    <h4>
+                      Select View: &nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Last Week</a>&nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Last Month</a>&nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Last Billing</a>
+                      &nbsp;&nbsp;&nbsp;
+                      Compare: &nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Temperature</a>&nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Past</a>&nbsp;
+                      <a class="btn btn-primary"  style="font-size: 15px">Similar Homes</a>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <a class="btn btn-danger"  style="font-size: 15px">Download</a>
+                    </h4>
+                    <div ng-controller="HistoricalBillCompare">
+    <nvd3-multi-bar-chart
+            data="exampleData"
+            id="exampleId"
+            height="300"
+            showXAxis="true"
+            showYAxis="true"
+            stacked="false"
+            showControls="false"
+            showLegend="true">
+        <svg></svg>
+    </nvd3-multi-bar-chart>
+</div>
+                     <ul class="list-group">
+                      <li class="list-group-item" style="font-size: 18px"><em>Average Usage For Current Billing: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOU: 35 KWh/day &nbsp;&nbsp;&nbsp;NEIGHBORS: 36 KWh/day</em></li>
+                      <li class="list-group-item" style="font-size: 18px"><em>Expected Expenditure For Current Billing: &nbsp;YOU:&nbsp;$150.34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEIGHBORS: $158.34<em></li>
+                      <li class="list-group-item" style="font-size: 18px"><em>Expenditure For Previous Billing: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOU: $164.34 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEIGHBORS: $160.33</em></li>
+                    </ul>
+
+                  </div><!--/panel-body-->
+                </div><!--/panel-->
+
+    </div>
+
+    
+</div>

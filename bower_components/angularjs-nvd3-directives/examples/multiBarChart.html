@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+    <title>Angular.js nvd3.js Line Chart Directive</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <script src="js/angular.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/nv.d3.js"></script>
+    <script src="../dist/angularjs-nvd3-directives.js"></script>
+    <link rel="stylesheet" href="stylesheets/nv.d3.css"/>
+    <script>
+        var app = angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
+
+        function HistoricalBillCompare($scope){
+            $scope.exampleData = [
+                {
+                    "key": "You",
+                    "values": [ [ 1 , 21] , [ 2 , 22] , [ 3 , 25] , [ 4 , 25] , [ 5 , 27] , [ 6 , 25] , [ 7 , 30] , [ 8 , 28] , [ 9 , 29] , [ 10 , 28] , [ 11 , 31] , [ 12 , 33] , [ 13 , 32] , [ 14 , 35] , [ 15 , 36] , [ 16 , 35] , [ 17 , 32] , [ 18 , 30] , [ 19 , 29] , [ 20 , 28] , [ 21 , 29.597478802228] , [ 22 , 30.831697585341] , [ 23 , 28.054068024708] , [ 24 , 29.294079423832] , [ 25 , 28.269264061274] , [ 26 , 24.934526898906] , [ 27 , 24.265982759406] , [ 28 , 27.217794897473] , [ 29 , 26.802601992077] , [ 30 , ], 
+                    [ 31 , ] , [ 32 , ] , [ 33 , ] , [ 34 , ] , [ 35 , ] , [ 36 , ] , [ 37 , ] , [ 38 , ] , [ 39 ,] , [ 40 , ] , [ 41 , ] , [ 42 , ] , [ 43 , ] , [ 44 , ] , [ 45 , ] , [ 46 , ] , [ 47 , ] , [ 48 , ] , [ 49 , ] , [ 50 , ] , [ 51 , ] , [ 52 , ] , [ 53 , ] , [ 54 , ] , [ 55 , ] , [ 56 , ] , [ 57 , ] , [ 58 , ] , [ 59 , ] , [ 60 , ] ]
+                },
+                {
+                    "key": "Neighbors",
+                    "values": [ [ 1 , 23] , [ 2 , 24] , [ 3 , 26] , [ 4 , 27] , [ 5 , 29] , [ 6 , 28] , [ 7 , 34] , [ 8 , 31] , [ 9 , 32] , [ 10 , 31] , [ 11 , 35] , [ 12 , 36] , [ 13 , 35] , [ 14 , 38] , [ 15 , 39] , [ 16 , 40] , [ 17 , 35] , [ 18 , 34] , [ 19 , 33] , [ 20 , 29] , [ 21 , 28.597478802228] , [ 22 , 31.831697585341] , [ 23 , 27.054068024708] , [ 24 , 30.294079423832] , [ 25 , 27.269264061274] , [ 26 , 25.934526898906] , [ 27 , 23.265982759406] , [ 28 , 26.217794897473] , [ 29 , 25.802601992077] , [ 30 , ], 
+                    [ 31 , ] , [ 32 , ] , [ 33 ,] , [ 34 , ] , [ 35 , ] , [ 36 , ] , [ 37 ,] , [ 38 , ] , [ 39 , ] , [ 40 , ] , [ 41 , ] , [ 42 , ] , [ 43 , ] , [ 44 ,] , [ 45 , ] , [ 46 , ] , [ 47 , ] , [ 48 , ] , [ 49 ,] , [ 50 , ] , [ 51 , ] , [ 52 , ] , [ 53 , ] , [ 54 , ] , [ 55 , ] , [ 56 , ] , [ 57 , ] , [ 58 , ] , [ 59 , ] , [ 60 , ] ]
+                },
+
+            ]
+
+        }
+    </script>
+
+</head>
+<body ng-app='nvd3TestApp'>
+
+<div ng-controller="HistoricalBillCompare">
+    <nvd3-multi-bar-chart
+            data="exampleData"
+            id="exampleId"
+            height="400"
+            showXAxis="true"
+            showYAxis="true"
+            stacked="false"
+            showControls="false"
+            showLegend="true">
+        <svg></svg>
+    </nvd3-multi-bar-chart>
+</div>
+
+</body>
+</html>
